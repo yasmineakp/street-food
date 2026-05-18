@@ -7,8 +7,8 @@
 // ─── CONFIGURATION ───
 // Remplacez ces deux valeurs par celles de votre projet Supabase
 // Dashboard Supabase → Settings → API
-const SUPABASE_URL = 'https://yftcetimcyapfksniawf.supabase.co';
-const SUPABASE_ANON_KEY = 'sb_publishable_L-7opNn22XFkqSBDpzQS6Q_sa9A3Wdi';
+const SUPABASE_URL = 'https://pbbgogjhahqlqmszkyna.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBiYmdvZ2poYWhxbHFtc3preW5hIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkxMTI5NjYsImV4cCI6MjA5NDY4ODk2Nn0.OVV-MFwYg7qNCPjLEPXuyXQ9TYiH8Pm3f1pUEfZIIFc';
 
 // ─── SDK SUPABASE (chargé depuis CDN dans le HTML) ───
 // <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
