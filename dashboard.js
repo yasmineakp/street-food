@@ -22,24 +22,7 @@ class StreetFoodDashboard {
     // Méthode pour sauvegarder les livreurs
     this.init();
   }
-// 1. Tu récupères le restaurant depuis Supabase (comme tu fais déjà)
-const { data: restaurant } = await supabase
-  .from('restaurants')
-  .select('*')
-  .eq('slug', restoSlug)
-  .single();
 
-// 2. Tu demandes le mot de passe au gérant via une boîte de saisie
-const saisieGérant = prompt("Veuillez saisir le mot de passe de votre restaurant :");
-
-// 3. Tu vérifies si ça correspond
-if (saisieGérant !== restaurant.mot_de_passe) {
-  alert("Mot de passe incorrect ! Accès refusé.");
-  window.location.href = "https://google.com"; // Tu le rediriges ailleurs
-} else {
-  // Le code est bon ! Tu lances tes fonctions d'affichage du dashboard
-  chargerLesCommandesEnTempsRéel();
-}
   async init() {
     this.showLoader(true);
     try {
@@ -747,6 +730,7 @@ if (saisieGérant !== restaurant.mot_de_passe) {
     setTimeout(()=>el.remove(),3200);
   }
 }
+
 
 const dashboard = new StreetFoodDashboard();
 window.dashboard = dashboard;
