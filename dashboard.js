@@ -735,10 +735,3 @@ const dashboard = new StreetFoodDashboard();
 window.dashboard = dashboard;
 
 // Écouteur global pour les selects de livreurs
-document.addEventListener('change', (e) => {
-  if (e.target.classList.contains('livreur-select')) {
-    const cmdId = e.target.dataset.cmdId;
-    const livreurId = e.target.value;
-    dashboard.assignLivreur(cmdId, livreurId);
-  }
-});
