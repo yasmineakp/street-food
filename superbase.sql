@@ -311,3 +311,11 @@ JOIN restaurants r ON r.id = c.restaurant_id
 LEFT JOIN livreurs l ON l.id = c.livreur_id
 LEFT JOIN commande_items ci ON ci.commande_id = c.id
 GROUP BY c.id, r.nom, l.id, c.livreur_id;
+
+
+-- Active la sécurité sur la table restaurants
+ALTER TABLE restaurants ENABLE ROW LEVEL SECURITY;
+
+-- Permet à l'application (et aux clients) de lire les infos des restaurants
+CREATE POLICY "restaurants_public_read" ON restaurants
+  FOR SELECT USING (true);
