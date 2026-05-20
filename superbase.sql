@@ -319,3 +319,10 @@ ALTER TABLE restaurants ENABLE ROW LEVEL SECURITY;
 -- Permet à l'application (et aux clients) de lire les infos des restaurants
 CREATE POLICY "restaurants_public_read" ON restaurants
   FOR SELECT USING (true);
+
+
+-- Active le Realtime pour la table des commandes
+ALTER PUBLICATION supabase_realtime ADD TABLE commandes;
+
+-- Active le Realtime pour la table des items de commande
+ALTER PUBLICATION supabase_realtime ADD TABLE commande_items;
